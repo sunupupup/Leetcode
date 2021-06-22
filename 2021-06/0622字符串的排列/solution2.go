@@ -25,6 +25,7 @@ func permutation(s string) []string {
             visit[j] = true
             perm = append(perm,t[j])
             backtrack(i+1)
+            //不访问这个节点
             perm = perm[:len(perm)-1]
             visit[j] = false
         }
