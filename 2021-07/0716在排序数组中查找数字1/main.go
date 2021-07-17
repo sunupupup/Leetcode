@@ -1,3 +1,14 @@
+/*
+剑指 Offer 53 - I. 在排序数组中查找数字 I
+统计一个数字在排序数组中出现的次数。
+
+
+示例 1:
+
+输入: nums = [5,7,7,8,8,10], target = 8
+输出: 2
+*/
+
 func search(nums []int, target int) int {
 	//找到第一个数，和第一个大的数
 	index1, index2 := 0, 0
