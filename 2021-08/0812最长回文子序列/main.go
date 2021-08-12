@@ -12,33 +12,33 @@
 */
 
 func longestPalindromeSubseq(s string) int {
-    //if(nums[i]==nums[j])   dp[i][j] = dp[i+1][j-1] + 2
-    //if(nums[i]!=nums[j])   dp[i][j] = dp[i+1][j-1]
-    n := len(s)
+	//if(nums[i]==nums[j])   dp[i][j] = dp[i+1][j-1] + 2
+	//if(nums[i]!=nums[j])   dp[i][j] = max(dp[i][j-1],dp[i+1][j])
+	n := len(s)
 
-    dp := make([][]int,n)
-    for i:=range dp{
-        dp[i] = make([]int,n)
-        dp[i][i] = 1
-    }
-    for i:=n-1;i>=0;i-- {
-        si := s[i]
-        for j:=i+1;j<n;j++ {
-            sj := s[j]
-            if si==sj {
-                dp[i][j] = 2 + dp[i+1][j-1]
-            }else{
-                dp[i][j] = max(dp[i+1][j],dp[i][j-1])
-            }
-        }
-    }
-    //fmt.Println(dp)
-    return dp[0][n-1]
+	dp := make([][]int, n)
+	for i := range dp {
+		dp[i] = make([]int, n)
+		dp[i][i] = 1
+	}
+	for i := n - 1; i >= 0; i-- {
+		si := s[i]
+		for j := i + 1; j < n; j++ {
+			sj := s[j]
+			if si == sj {
+				dp[i][j] = 2 + dp[i+1][j-1]
+			} else {
+				dp[i][j] = max(dp[i+1][j], dp[i][j-1])
+			}
+		}
+	}
+	//fmt.Println(dp)
+	return dp[0][n-1]
 }
 
-func max(a,b int)int{
-    if a> b{
-        return a
-    }
-    return b
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
