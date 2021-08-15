@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demo1() {
 
 	n := 0
 	fmt.Scan(&n)
