@@ -23,16 +23,11 @@ func main() {
 	for i := 0; i < len(arr); i++ {
 		arr[i] = arr[i][1 : len(arr[i])-1]
 	}
-
 	//先判断 * 的位置
 	//如果是第四种情况
 	if templateString == "*" {
-		for i := 0; i < len(arr); i++ {
-			if i != 0 {
-				fmt.Print(" ")
-			}
-			fmt.Print(arr[i])
-		}
+        pln(arr)
+        return 
 	}
 
 	//找 * 的位置
