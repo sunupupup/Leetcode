@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demo2() {
 	//找到奇数位和偶数为的众数即可
 	n := 0
 	fmt.Scan(&n)
