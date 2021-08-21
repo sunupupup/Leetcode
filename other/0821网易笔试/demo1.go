@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func test1() {
 	temp := []int{}
 	num := 0
 	for {

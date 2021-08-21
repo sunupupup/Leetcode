@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func test2() {
 
 	fmt.Println(string(findKthBit(4, 11)))
 }

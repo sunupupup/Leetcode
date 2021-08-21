@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func test3() {
 	//先从最小的人发纸
 
 	//记录已经发了纸的人
