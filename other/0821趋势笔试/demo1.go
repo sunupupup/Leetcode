@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func test1() {
 	templateString := ""
 	fmt.Scan(&templateString)
 
