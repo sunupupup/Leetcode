@@ -26,8 +26,8 @@ func main() {
 	//先判断 * 的位置
 	//如果是第四种情况
 	if templateString == "*" {
-        pln(arr)
-        return 
+		pln(arr)
+		return
 	}
 
 	//找 * 的位置
@@ -47,7 +47,7 @@ func main() {
 			}
 		}
 		pln(ret)
-        return 
+		return
 	}
 	//如果出现在第一个，只需要匹配后面的所有字符
 	if index == 0 {
@@ -57,11 +57,11 @@ func main() {
 			}
 		}
 		pln(ret)
-        return 
+		return
 	}
 
 	for i := 0; i < len(arr); i++ {
-		if helper2(templateString, arr[i],index) {
+		if helper2(templateString, arr[i], index) {
 			ret = append(ret, arr[i])
 		}
 	}
@@ -70,10 +70,10 @@ func main() {
 }
 
 func pln(arr []string) {
-    if len(arr)==0 {
-        fmt.Print("Not Match")
-        return 
-    }
+	if len(arr) == 0 {
+		fmt.Print("Not Match")
+		return
+	}
 	for i := 0; i < len(arr); i++ {
 		if i != 0 {
 			fmt.Print(" ")
@@ -87,13 +87,12 @@ func helper1(s1, s2 string) bool {
 	arr_s1 := strings.Split(s1, ".")
 	arr_s2 := strings.Split(s2, ".")
 
-
 	if len(arr_s2) <= len(arr_s1) {
 		return false
 	}
 
 	for i := len(arr_s1) - 1; i >= 1; i-- {
-        if arr_s1[i] != arr_s2[i + len(arr_s2)-len(arr_s1)] {
+		if arr_s1[i] != arr_s2[i+len(arr_s2)-len(arr_s1)] {
 			return false
 		}
 	}
