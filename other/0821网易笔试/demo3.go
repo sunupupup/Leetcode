@@ -50,6 +50,7 @@ func main() {
 		for i := 0; i < len(smallChildren); i++ {
 			mask[smallChildren[i]] = 1
 			now := smallChildren[i]
+			//向左右遍历
 			goLeft(now)
 			goRight(now)
 		}
