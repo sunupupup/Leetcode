@@ -15,7 +15,7 @@ import (
 	"strings"
 )
 
-func main() {
+func test7() {
 	input := bufio.NewScanner(os.Stdin)
 	for input.Scan() {
 		nums := strings.Split(input.Text(), " ")
